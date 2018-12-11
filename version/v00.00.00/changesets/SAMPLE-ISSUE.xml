@@ -1,0 +1,16 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+	<!-- This file should contain the changes for SAMPLE-ISSUE in v0.0.1 -->
+	
+	<!-- <changeSet id="SAMPLE-ISSUE" author="msola">
+		<preConditions onFail="MARK_RAN" onSqlOutput="TEST">
+			<columnExists tableName="ECA_TEST" columnName="nif" />
+		</preConditions>
+		<comment>We add comment on eca_test in english</comment>
+		<setColumnRemarks tableName="AGE_AGENDAS" columnName="nif"
+			remarks="Tjçhe nif is the document of the person" />
+	</changeSet> -->
+	
+</databaseChangeLog>

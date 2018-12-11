@@ -1,0 +1,49 @@
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<!-- This file should contain the changes for v0.0.1 -->
+	
+	<!-- PLACE CHANGESETS BEFORE THIS TAG! -->
+
+
+	<changeSet id="ECA_1245-1" author="ecabezuelo" >
+        <preConditions onFail="MARK_RAN" onSqlOutput="TEST">
+            <sqlCheck expectedResult="0">select count(*) from ECA_TEST where nif = 001</sqlCheck>
+		</preConditions>
+		<insert tableName="ECA_TEST">
+			<column name="nif" value="001" />
+			<column name="nombre" value="prueba1" />
+			<column name="apellidos" value="apellido2" />
+			<column name="telefono" value="658877414" />
+			<column name="codigo_postal" value="08991" />
+			<column name="edad" value="45" />
+			<column name="sexo" value="M" />
+			<column name="profesion" value="Informatico" />
+		</insert>
+	</changeSet>
+
+	 <changeSet author="ecabezuelo" id="ECA_12656-1">
+  		<createTable tableName="COCHES">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="boolean" defaultValueBoolean="true"/>
+        </createTable>
+	  </changeSet>
+	  
+
+	 
+	 
+
+	<!-- When finishing this version, uncomment this to tag DB -->
+	<changeSet author="ecabezuelo" id="tag_v0_0_1"> 
+		<tagDatabase tag="0.0.1"/> 
+ 	</changeSet>  
+	
+</databaseChangeLog>
